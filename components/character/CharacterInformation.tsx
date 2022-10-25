@@ -3,7 +3,6 @@ import { Button, Image, ScrollView, StyleSheet, Text, View } from 'react-native'
 import { useRoute } from '@react-navigation/native'
 export const CharacterInformation = ({ navigation }) => {
   const route = useRoute();
-  console.log(route.params?.data.image)
   return (
     <ScrollView style={{display:'flex'}} contentContainerStyle={{display:'flex',justifyContent:'center',alignItems:'center'}}>
       <View style={styles.cardInfo}>
