@@ -30,7 +30,6 @@ const App = () => {
   return (    
   <NavigationContainer theme={isDarkMode?DarkTheme:DefaultTheme}>
     <DrawerNavigator/>
-    <StackNavigator/>
   </NavigationContainer>
   );
 };

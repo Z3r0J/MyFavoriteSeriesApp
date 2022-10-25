@@ -2,6 +2,7 @@ import React from 'react'
 import { useColorScheme, View } from 'react-native'
 import { createDrawerNavigator } from '@react-navigation/drawer'
 import { HomeComponent } from '../home/HomeComponent';
+import { CharacterInformation } from '../character/CharacterInformation';
 
 export const DrawerNavigator = () => {
     const Drawer = createDrawerNavigator();
@@ -13,6 +14,8 @@ export const DrawerNavigator = () => {
     screenOptions={{headerTintColor:isDarkMode?"rgb(255,255,255)":"rgb(0,0,0)"}}
     >
         <Drawer.Screen name='Inicio' component={HomeComponent}/>
+        <Drawer.Screen name='CharacterInformation' component={CharacterInformation} options={{drawerItemStyle:{display:'none'}}}/>
+    
     </Drawer.Navigator>
   )
 }
