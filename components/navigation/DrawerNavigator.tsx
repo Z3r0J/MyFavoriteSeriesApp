@@ -7,6 +7,8 @@ import { CharacterListComponent } from '../character/CharacterListComponent';
 import { MomentsInformationComponent } from '../bestmoments/MomentsInformationComponent';
 import { ListMomentsComponent } from '../bestmoments/ListMomentsComponent';
 import { AboutComponent } from '../about/AboutComponent';
+import { InMyLifeComponent } from '../InMyLife/InMyLifeComponent';
+import { HiredMeComponent } from '../hiredme/HiredMeComponent';
 
 export const DrawerNavigator = () => {
     const Drawer = createDrawerNavigator();
@@ -17,12 +19,14 @@ export const DrawerNavigator = () => {
     initialRouteName='HomeComponent'
     screenOptions={{headerTintColor:isDarkMode?"rgb(255,255,255)":"rgb(0,0,0)"}}
     >
-        <Drawer.Screen name='Inicio' component={HomeComponent}/>
-        <Drawer.Screen name='Character' component={CharacterListComponent}/>
-        <Drawer.Screen name='ListMoments' component={ListMomentsComponent}/>
-        <Drawer.Screen name='Acerca De' component={AboutComponent}/>
-        <Drawer.Screen name='CharacterInformation' component={CharacterInformation} options={{drawerItemStyle:{display:'none'}}}/>
-        <Drawer.Screen name='MomentsInformation' component={MomentsInformationComponent} options={{drawerItemStyle:{display:'none'}}}/>
+        <Drawer.Screen name='Inicio' component={HomeComponent} options={{title:"Inicio"}}/>
+        <Drawer.Screen name='Character' component={CharacterListComponent} options={{title:"Personajes"}}/>
+        <Drawer.Screen name='ListMoments' component={ListMomentsComponent} options={{title:"Momentos"}}/>
+        <Drawer.Screen name='Acerca De' component={AboutComponent} options={{title:"Acerca De"}}/>
+        <Drawer.Screen name='InMyLife' component={InMyLifeComponent} options={{title:"En mi Vida"}}/>
+        <Drawer.Screen name='HiredMe' component={HiredMeComponent} options={{title:"Contratame"}}/>
+        <Drawer.Screen name='CharacterInformation' component={CharacterInformation} options={{title:"Informacion del Personaje",drawerItemStyle:{display:'none'}}}/>
+        <Drawer.Screen name='MomentsInformation' component={MomentsInformationComponent} options={{title:"Informacion Momentos",drawerItemStyle:{display:'none'}}}/>
     </Drawer.Navigator>
   )
 }

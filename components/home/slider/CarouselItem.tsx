@@ -1,7 +1,8 @@
 import React from 'react'
-import { Dimensions, Image, StyleSheet, Text, View } from 'react-native'
+import { Dimensions, Image, StyleSheet, Text, useColorScheme, View } from 'react-native'
 export const SLIDER_WIDTH = Dimensions.get('window').width + 120
 export const ITEM_WIDTH = Math.round(SLIDER_WIDTH * 0.5)
+
 
 export const CarouselItem = ({ item, index }) => {
   return (

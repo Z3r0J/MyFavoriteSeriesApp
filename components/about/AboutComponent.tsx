@@ -23,11 +23,14 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
       },
     item: {
-        fontSize: 16,
+        fontSize: 18,
         marginTop: 8,
         borderBottomWidth: 1,
         borderStyle: 'solid',
         borderColor: '#0DC195',
         color: '#5A5D5C',
+        fontWeight:'700',
+        fontStyle:'italic',
+        marginStart:9
       }
 })
